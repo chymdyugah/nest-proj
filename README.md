@@ -69,25 +69,25 @@ $ npm run prisma:dev:deploy
 ## Instructions
 
 - install dependencies
-- create .env file (see .env.example)
-- run app in dev mode
+- create a .env file (see .env.example)
+- run the app in dev mode
 - deploy database
 - run e2e tests
 
 ## Endpoints
 
 - POST /auth/signup; takes email and password to signup a user and returns a bearer JWT token.
-- POST /auth/login; takes email and password to login and returns a bearer JWT token.
+- POST /auth/login; takes email and password to log in and returns a bearer JWT token.
 - POST /posts; takes title and body to create a post for the authenticated user.
-- GET /posts; gets first page of posts for the authenticated user.
+- GET /posts; gets the first page of posts for the authenticated user.
 - GET /posts/:id; gets a post for the authenticated user.
 - PATCH /posts/:id; updates a post. takes in.
 - GET /user/me; gets the details of the authenticated user.
-- PATCH /user; updates the user's profile. takes in lastName, firstName, image.
+- PATCH /user; updates the user's profile. takes in lastName, firstName and image.
 
 ## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Nest is an MIT-licensed open-source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
