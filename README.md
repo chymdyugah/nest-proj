@@ -24,11 +24,12 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+a simple blogging rest API service built with [Nest](https://github.com/nestjs/nest) framework TypeScript.
 
 ## Installation
 
 ```bash
+# install app dependencies
 $ npm install
 ```
 
@@ -63,6 +64,7 @@ $ npm run test:cov
 ## Deploy database
 
 ```bash
+# deploy database migrations
 $ npm run prisma:dev:deploy
 ```
 
@@ -83,7 +85,7 @@ $ npm run prisma:dev:deploy
 - GET /posts/:id; gets a post for the authenticated user.
 - PATCH /posts/:id; updates a post. takes in.
 - GET /user/me; gets the details of the authenticated user.
-- PATCH /user; updates the user's profile. takes in lastName, firstName and image.
+- PATCH /user; updates the user's profile. takes in lastName, firstName.
 
 ## Support
 

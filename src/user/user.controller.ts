@@ -14,6 +14,7 @@ import { JwtGuard } from '../auth/guards';
 import { EditUserDto } from './dto';
 import { UserService } from './user.service';
 import { MyFileInterceptor } from './interceptor';
+import { ImageFilePipe } from './pipe';
 
 @UseGuards(JwtGuard)
 @Controller('user')
@@ -34,7 +35,10 @@ export class UserController {
 
   @Post('upload')
   @UseInterceptors(MyFileInterceptor)
-  uploadImage(@GetUser('id') userId: number, @UploadedFile() file) {
+  uploadImage(
+    @GetUser('id') userId: number,
+    @UploadedFile(new ImageFilePipe()) file: Express.Multer.File,
+  ) {
     // call service
     const dto: EditUserDto = {
       image: file.path,
