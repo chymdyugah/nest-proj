@@ -47,6 +47,8 @@ $ npm run start:prod
 
 ## Test
 
+- create env.test (see .env.example. advised to use a different database for testing).
+
 ```bash
 # unit tests
 $ npm run test
@@ -58,11 +60,19 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Deploy database
+
+```bash
+$ npm run prisma:dev:deploy
+```
+
 ## Instructions
 
 - install dependencies
+- create .env file (see .env.example)
 - run app in dev mode
-- run npx prisma migrate dev
+- deploy database
+- run e2e tests
 
 ## Endpoints
 
