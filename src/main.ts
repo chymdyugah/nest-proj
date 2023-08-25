@@ -8,7 +8,9 @@ async function bootstrap() {
   // restart server after adding this line
   // lets us use the global validation pipe to validate DTOs (serializers)
   // whitelist param tell nest to use only fields we defined in out DTOs
-  app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
+  app.useGlobalPipes(
+    new ValidationPipe({ whitelist: true }),
+  );
   await app.listen(3333);
 }
 bootstrap();

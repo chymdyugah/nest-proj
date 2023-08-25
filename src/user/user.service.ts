@@ -13,7 +13,10 @@ export class UserService {
     });
   }
 
-  async editUser(userId: number, dto: EditUserDto) {
+  async editUser(
+    userId: number,
+    dto: EditUserDto,
+  ) {
     const user = await this.prisma.user.update({
       where: {
         id: userId,
@@ -26,7 +29,10 @@ export class UserService {
     return user;
   }
 
-  async uploadImage(userId: number, dto: EditUserDto) {
+  async uploadImage(
+    userId: number,
+    dto: EditUserDto,
+  ) {
     const user = await this.prisma.user.update({
       where: {
         id: userId,

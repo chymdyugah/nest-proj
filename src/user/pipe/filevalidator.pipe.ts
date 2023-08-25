@@ -9,8 +9,12 @@ export class ImageFilePipe extends ParseFilePipe {
     super({
       validators: [
         // ... Set of file validator instances here
-        new MaxFileSizeValidator({ maxSize: 10000 }),
-        new FileTypeValidator({ fileType: /.(jpg|jpeg|png)$/ }),
+        new MaxFileSizeValidator({
+          maxSize: 50000000, // 5mb
+        }),
+        new FileTypeValidator({
+          fileType: /.(jpg|jpeg|png)$/,
+        }),
       ],
     });
   }
